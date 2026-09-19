@@ -1,1 +1,1724 @@
+<!doctype html>
+<html lang="ja">
 
+<head>
+  <meta charset="utf-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1"
+  >
+
+  <meta
+    name="theme-color"
+    content="#f1eee7"
+  >
+
+  <title>
+    第一期メンバー申込み | CourTomo
+  </title>
+
+
+  <style>
+
+    :root {
+
+      --bg: #f1eee7;
+
+      --paper: #f8f5ee;
+
+      --ink: #151515;
+
+      --sub: #68645c;
+
+      --line:
+        rgba(21, 21, 21, 0.22);
+
+      --orange:
+        #e56b2f;
+
+      --ease:
+        cubic-bezier(.2, .75, .2, 1);
+
+    }
+
+
+    * {
+      box-sizing:
+        border-box;
+    }
+
+
+    html {
+      scroll-behavior:
+        smooth;
+    }
+
+
+    body {
+
+      margin: 0;
+
+      background:
+        var(--bg);
+
+      color:
+        var(--ink);
+
+      font-family:
+        "Hiragino Sans",
+        "Yu Gothic",
+        "YuGothic",
+        Meiryo,
+        sans-serif;
+
+      -webkit-font-smoothing:
+        antialiased;
+
+    }
+
+
+    body::before {
+
+      content: "";
+
+      position:
+        fixed;
+
+      inset: 0;
+
+      pointer-events:
+        none;
+
+      opacity:
+        0.12;
+
+      background-image:
+        radial-gradient(
+          rgba(0, 0, 0, 0.32)
+          0.45px,
+          transparent
+          0.55px
+        );
+
+      background-size:
+        5px 5px;
+
+      mix-blend-mode:
+        multiply;
+
+      z-index:
+        100;
+
+    }
+
+
+    ::selection {
+
+      background:
+        var(--orange);
+
+      color:
+        white;
+
+    }
+
+
+    a {
+      color:
+        inherit;
+    }
+
+
+    .site {
+
+      width:
+        min(
+          1000px,
+          calc(100% - 40px)
+        );
+
+      margin:
+        auto;
+
+    }
+
+
+
+    /* -------------------
+       HEADER
+    ------------------- */
+
+    .topbar {
+
+      height:
+        74px;
+
+      border-bottom:
+        1px solid var(--line);
+
+      display:
+        flex;
+
+      justify-content:
+        space-between;
+
+      align-items:
+        center;
+
+    }
+
+
+    .brand {
+
+      text-decoration:
+        none;
+
+      font-size:
+        26px;
+
+      font-weight:
+        900;
+
+      letter-spacing:
+        -0.06em;
+
+    }
+
+
+    .back {
+
+      font-size:
+        12px;
+
+      text-decoration:
+        none;
+
+      border-bottom:
+        1px solid currentColor;
+
+    }
+
+
+
+    /* -------------------
+       INTRO
+    ------------------- */
+
+    .intro {
+
+      padding:
+        58px 0 30px;
+
+    }
+
+
+    .eyebrow {
+
+      margin-bottom:
+        14px;
+
+      font:
+        700 10px monospace;
+
+      letter-spacing:
+        0.14em;
+
+      color:
+        var(--orange);
+
+    }
+
+
+    h1,
+    h2 {
+
+      word-break:
+        keep-all;
+
+      text-wrap:
+        balance;
+
+    }
+
+
+    h1 {
+
+      max-width:
+        800px;
+
+      margin:
+        0;
+
+      font-size:
+        clamp(
+          46px,
+          6.7vw,
+          80px
+        );
+
+      line-height:
+        0.97;
+
+      letter-spacing:
+        -0.06em;
+
+    }
+
+
+    .intro-text {
+
+      max-width:
+        690px;
+
+      margin:
+        24px 0 0;
+
+      font-size:
+        15px;
+
+      line-height:
+        1.9;
+
+      color:
+        #4e4a44;
+
+    }
+
+
+
+    /* -------------------
+       PHOTO
+    ------------------- */
+
+    .cover {
+
+      position:
+        relative;
+
+      isolation:
+        isolate;
+
+      height:
+        270px;
+
+      margin-top:
+        30px;
+
+      overflow:
+        hidden;
+
+      display:
+        flex;
+
+      align-items:
+        flex-end;
+
+      color:
+        white;
+
+    }
+
+
+    .cover::before {
+
+      content: "";
+
+      position:
+        absolute;
+
+      inset: 0;
+
+      z-index:
+        -2;
+
+      background-image:
+        url(
+          "https://images.unsplash.com/photo-1768349027552-0b2b52b68c7c?auto=format&fit=crop&q=82&w=1600"
+        );
+
+      background-size:
+        cover;
+
+      background-position:
+        center 45%;
+
+      background-repeat:
+        no-repeat;
+
+    }
+
+
+    .cover::after {
+
+      content: "";
+
+      position:
+        absolute;
+
+      inset: 0;
+
+      z-index:
+        -1;
+
+      background:
+        linear-gradient(
+          0deg,
+          rgba(12, 16, 18, 0.80),
+          rgba(12, 16, 18, 0.08)
+        );
+
+    }
+
+
+    .cover span {
+
+      padding:
+        20px;
+
+      font:
+        700 10px monospace;
+
+      letter-spacing:
+        0.12em;
+
+    }
+
+
+
+    /* -------------------
+       BASIC INFO
+    ------------------- */
+
+    .info {
+
+      display:
+        grid;
+
+      grid-template-columns:
+        repeat(3, 1fr);
+
+      margin:
+        24px 0 38px;
+
+      border-top:
+        1.4px solid var(--ink);
+
+      border-bottom:
+        1px solid var(--ink);
+
+    }
+
+
+    .info div {
+
+      padding:
+        14px 10px;
+
+    }
+
+
+    .info div + div {
+
+      border-left:
+        1px solid var(--line);
+
+    }
+
+
+    .info small {
+
+      display:
+        block;
+
+      margin-bottom:
+        3px;
+
+      font:
+        700 9px monospace;
+
+      letter-spacing:
+        0.08em;
+
+      color:
+        var(--sub);
+
+    }
+
+
+    .info b {
+
+      font-size:
+        14px;
+
+    }
+
+
+
+    /* -------------------
+       NOTICE
+    ------------------- */
+
+    .notice {
+
+      margin-bottom:
+        38px;
+
+      padding:
+        15px 17px;
+
+      border-left:
+        3px solid var(--orange);
+
+      background:
+        rgba(
+          255,
+          255,
+          255,
+          0.34
+        );
+
+      font-size:
+        12px;
+
+      line-height:
+        1.8;
+
+      color:
+        #57534c;
+
+    }
+
+
+
+    /* -------------------
+       FORM
+    ------------------- */
+
+    form {
+
+      display:
+        grid;
+
+      grid-template-columns:
+        220px 1fr;
+
+      border-top:
+        1px solid var(--ink);
+
+      padding-bottom:
+        80px;
+
+    }
+
+
+    .side {
+
+      padding:
+        25px 24px 25px 0;
+
+      border-bottom:
+        1px solid var(--line);
+
+    }
+
+
+    .side-number {
+
+      font:
+        700 10px monospace;
+
+      color:
+        var(--orange);
+
+    }
+
+
+    .side h2 {
+
+      margin:
+        14px 0 6px;
+
+      font-size:
+        20px;
+
+      letter-spacing:
+        -0.03em;
+
+    }
+
+
+    .side p {
+
+      margin: 0;
+
+      font-size:
+        11.5px;
+
+      line-height:
+        1.7;
+
+      color:
+        var(--sub);
+
+    }
+
+
+    .fields {
+
+      padding:
+        25px 0 30px 30px;
+
+      border-left:
+        1px solid var(--line);
+
+      border-bottom:
+        1px solid var(--line);
+
+    }
+
+
+    .field {
+
+      margin-bottom:
+        20px;
+
+    }
+
+
+    .field:last-child {
+
+      margin-bottom:
+        0;
+
+    }
+
+
+    label {
+
+      display:
+        block;
+
+      margin-bottom:
+        7px;
+
+      font-size:
+        12px;
+
+      font-weight:
+        800;
+
+    }
+
+
+    .required {
+
+      margin-left:
+        6px;
+
+      font:
+        700 9px monospace;
+
+      color:
+        var(--orange);
+
+    }
+
+
+    input,
+    select,
+    textarea {
+
+      width:
+        100%;
+
+      padding:
+        13px 12px;
+
+      border:
+        1px solid #4b4842;
+
+      border-radius:
+        0;
+
+      background:
+        rgba(
+          255,
+          255,
+          255,
+          0.35
+        );
+
+      color:
+        var(--ink);
+
+      font:
+        inherit;
+
+      font-size:
+        16px;
+
+      outline:
+        none;
+
+      transition:
+        0.18s var(--ease);
+
+    }
+
+
+    input:focus,
+    select:focus,
+    textarea:focus {
+
+      border-color:
+        var(--orange);
+
+      background:
+        white;
+
+      box-shadow:
+        0 0 0 3px
+        rgba(
+          229,
+          107,
+          47,
+          0.10
+        );
+
+    }
+
+
+    textarea {
+
+      min-height:
+        120px;
+
+      resize:
+        vertical;
+
+    }
+
+
+
+    /* -------------------
+       CHECKBOX
+    ------------------- */
+
+    .check {
+
+      display:
+        flex;
+
+      align-items:
+        flex-start;
+
+      gap:
+        10px;
+
+      padding:
+        13px 0;
+
+      border-top:
+        1px solid var(--line);
+
+    }
+
+
+    .check:first-child {
+
+      border-top:
+        none;
+
+    }
+
+
+    .check input {
+
+      width:
+        18px;
+
+      height:
+        18px;
+
+      margin-top:
+        2px;
+
+      flex:
+        0 0 auto;
+
+    }
+
+
+    .check label {
+
+      margin:
+        0;
+
+      font-weight:
+        500;
+
+      line-height:
+        1.75;
+
+    }
+
+
+
+    /* -------------------
+       SUBMIT
+    ------------------- */
+
+    .submit-wrap {
+
+      grid-column:
+        1 / -1;
+
+      padding-top:
+        30px;
+
+      display:
+        flex;
+
+      justify-content:
+        flex-end;
+
+    }
+
+
+    button {
+
+      padding:
+        17px 22px;
+
+      border:
+        1.4px solid var(--ink);
+
+      background:
+        var(--ink);
+
+      color:
+        white;
+
+      font-size:
+        14px;
+
+      font-weight:
+        900;
+
+      cursor:
+        pointer;
+
+      transition:
+        0.22s var(--ease);
+
+    }
+
+
+    button:hover {
+
+      transform:
+        translateY(-2px);
+
+      box-shadow:
+        0 7px 0
+        rgba(
+          21,
+          21,
+          21,
+          0.08
+        );
+
+    }
+
+
+
+    /* -------------------
+       SUCCESS
+    ------------------- */
+
+    .success {
+
+      display:
+        none;
+
+      margin:
+        10px 0 75px;
+
+      padding:
+        30px;
+
+      border:
+        1.3px solid var(--ink);
+
+      background:
+        var(--paper);
+
+    }
+
+
+    .success h2 {
+
+      margin:
+        0 0 10px;
+
+      font-size:
+        34px;
+
+      letter-spacing:
+        -0.04em;
+
+    }
+
+
+    .success p {
+
+      margin:
+        0;
+
+      line-height:
+        1.8;
+
+      color:
+        #4e4a44;
+
+    }
+
+
+    .success a {
+
+      display:
+        inline-block;
+
+      margin-top:
+        18px;
+
+      font-weight:
+        800;
+
+    }
+
+
+
+    /* -------------------
+       FOOTER
+    ------------------- */
+
+    footer {
+
+      padding:
+        22px 0 38px;
+
+      border-top:
+        1px solid var(--line);
+
+      font-size:
+        11px;
+
+      color:
+        var(--sub);
+
+    }
+
+
+
+    /* -------------------
+       MOBILE
+    ------------------- */
+
+    @media (
+      max-width: 760px
+    ) {
+
+      .site {
+
+        width:
+          min(
+            100% - 28px,
+            1000px
+          );
+
+      }
+
+
+      .topbar {
+
+        height:
+          66px;
+
+      }
+
+
+      .brand {
+
+        font-size:
+          23px;
+
+      }
+
+
+      .intro {
+
+        padding-top:
+          43px;
+
+      }
+
+
+      h1 {
+
+        font-size:
+          clamp(
+            43px,
+            13vw,
+            62px
+          );
+
+      }
+
+
+      .cover {
+
+        height:
+          54vw;
+
+        min-height:
+          240px;
+
+      }
+
+
+      .info {
+
+        grid-template-columns:
+          1fr;
+
+      }
+
+
+      .info div + div {
+
+        border-left:
+          none;
+
+        border-top:
+          1px solid var(--line);
+
+      }
+
+
+      form {
+
+        grid-template-columns:
+          1fr;
+
+      }
+
+
+      .side {
+
+        padding:
+          24px 0 10px;
+
+        border-bottom:
+          none;
+
+      }
+
+
+      .fields {
+
+        padding:
+          7px 0 28px;
+
+        border-left:
+          none;
+
+      }
+
+
+      .submit-wrap {
+
+        justify-content:
+          stretch;
+
+      }
+
+
+      .submit-wrap button {
+
+        width:
+          100%;
+
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+
+<body>
+
+
+<div class="site">
+
+
+  <!-- HEADER -->
+
+  <header class="topbar">
+
+    <a
+      class="brand"
+      href="index.html"
+    >
+      CourTomo
+    </a>
+
+
+    <a
+      class="back"
+      href="index.html"
+    >
+      ← TOPへ戻る
+    </a>
+
+  </header>
+
+
+
+  <!-- INTRO -->
+
+  <section class="intro">
+
+    <div class="eyebrow">
+      FIRST MEMBER ENTRY / 2026
+    </div>
+
+
+    <h1>
+      第一期メンバー申込み。
+    </h1>
+
+
+    <p class="intro-text">
+
+      CourTomoはこれから始まる活動です。
+
+      まずは活動開始に向けたメンバー登録として
+      受け付けます。
+
+      開催日時・会場が決まり次第、
+      保護者の方へご案内します。
+
+    </p>
+
+
+    <div class="cover">
+
+      <span>
+        FIRST TEN / COURTOMO
+      </span>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- BASIC INFO -->
+
+  <div class="info">
+
+    <div>
+
+      <small>
+        TARGET
+      </small>
+
+      <b>
+        中学生
+      </b>
+
+    </div>
+
+
+    <div>
+
+      <small>
+        STYLE
+      </small>
+
+      <b>
+        単発参加型
+      </b>
+
+    </div>
+
+
+    <div>
+
+      <small>
+        PRICE
+      </small>
+
+      <b>
+        1回 1,000円予定
+      </b>
+
+    </div>
+
+  </div>
+
+
+
+  <!-- NOTICE -->
+
+  <div class="notice">
+
+    現在は第一期メンバー登録用の試作フォームです。
+
+    このページでは、
+    入力された情報はまだ保存・送信されません。
+
+    本番運用時には、
+    Googleスプレッドシート等へ
+    申込情報を集約できるように変更します。
+
+  </div>
+
+
+
+  <!-- FORM -->
+
+  <form id="entryForm">
+
+
+
+    <!-- GUARDIAN -->
+
+    <div class="side">
+
+      <div class="side-number">
+        01
+      </div>
+
+      <h2>
+        保護者情報
+      </h2>
+
+      <p>
+        連絡は保護者の方へ行います。
+      </p>
+
+    </div>
+
+
+    <div class="fields">
+
+      <div class="field">
+
+        <label>
+
+          保護者氏名
+
+          <span class="required">
+            必須
+          </span>
+
+        </label>
+
+        <input
+          type="text"
+          name="guardian"
+          required
+          autocomplete="name"
+        >
+
+      </div>
+
+
+      <div class="field">
+
+        <label>
+
+          メールアドレス
+
+          <span class="required">
+            必須
+          </span>
+
+        </label>
+
+        <input
+          type="email"
+          name="email"
+          required
+          autocomplete="email"
+        >
+
+      </div>
+
+
+      <div class="field">
+
+        <label>
+
+          電話番号
+
+          <span class="required">
+            必須
+          </span>
+
+        </label>
+
+        <input
+          type="tel"
+          name="phone"
+          required
+          autocomplete="tel"
+        >
+
+      </div>
+
+    </div>
+
+
+
+    <!-- PLAYER -->
+
+    <div class="side">
+
+      <div class="side-number">
+        02
+      </div>
+
+      <h2>
+        選手情報
+      </h2>
+
+      <p>
+        参加する選手について教えてください。
+      </p>
+
+    </div>
+
+
+    <div class="fields">
+
+      <div class="field">
+
+        <label>
+
+          選手氏名
+
+          <span class="required">
+            必須
+          </span>
+
+        </label>
+
+        <input
+          type="text"
+          name="player"
+          required
+        >
+
+      </div>
+
+
+      <div class="field">
+
+        <label>
+
+          学年
+
+          <span class="required">
+            必須
+          </span>
+
+        </label>
+
+        <select
+          name="grade"
+          required
+        >
+
+          <option value="">
+            選択してください
+          </option>
+
+          <option value="中学1年">
+            中学1年
+          </option>
+
+          <option value="中学2年">
+            中学2年
+          </option>
+
+          <option value="中学3年">
+            中学3年
+          </option>
+
+        </select>
+
+      </div>
+
+
+      <div class="field">
+
+        <label>
+
+          お住まい・通学エリア
+
+          <span class="required">
+            必須
+          </span>
+
+        </label>
+
+        <select
+          name="area"
+          required
+        >
+
+          <option value="">
+            選択してください
+          </option>
+
+          <option value="大田区">
+            大田区
+          </option>
+
+          <option value="品川区">
+            品川区
+          </option>
+
+          <option value="川崎市">
+            川崎市
+          </option>
+
+          <option value="その他">
+            その他
+          </option>
+
+        </select>
+
+      </div>
+
+
+      <div class="field">
+
+        <label>
+
+          バスケットボール経験
+
+          <span class="required">
+            必須
+          </span>
+
+        </label>
+
+        <select
+          name="experience"
+          required
+        >
+
+          <option value="">
+            選択してください
+          </option>
+
+          <option value="未経験〜1年未満">
+            未経験〜1年未満
+          </option>
+
+          <option value="1〜2年">
+            1〜2年
+          </option>
+
+          <option value="2〜4年">
+            2〜4年
+          </option>
+
+          <option value="4年以上">
+            4年以上
+          </option>
+
+        </select>
+
+      </div>
+
+    </div>
+
+
+
+    <!-- INTEREST -->
+
+    <div class="side">
+
+      <div class="side-number">
+        03
+      </div>
+
+      <h2>
+        興味のある練習
+      </h2>
+
+      <p>
+        最初にやってほしいことを知りたいです。
+      </p>
+
+    </div>
+
+
+    <div class="fields">
+
+      <div class="field">
+
+        <label>
+          一番参加してみたいテーマ
+        </label>
+
+
+        <select name="theme">
+
+          <option value="シュート">
+            シュート
+          </option>
+
+          <option value="1on1">
+            1on1
+          </option>
+
+          <option value="ディフェンス">
+            ディフェンス
+          </option>
+
+          <option value="身体づくり">
+            身体づくり・ストレッチ
+          </option>
+
+          <option value="ゲーム形式">
+            ゲーム形式
+          </option>
+
+          <option value="未定">
+            まだ決めていない
+          </option>
+
+        </select>
+
+      </div>
+
+
+      <div class="field">
+
+        <label>
+          CourTomoに期待すること
+          （任意）
+        </label>
+
+
+        <textarea
+          name="message"
+          placeholder="例：部活以外でもシュートを練習できる場所がほしい"
+        ></textarea>
+
+      </div>
+
+    </div>
+
+
+
+    <!-- CONFIRM -->
+
+    <div class="side">
+
+      <div class="side-number">
+        04
+      </div>
+
+      <h2>
+        確認
+      </h2>
+
+      <p>
+        活動の位置づけをご確認ください。
+      </p>
+
+    </div>
+
+
+    <div class="fields">
+
+
+      <div class="check">
+
+        <input
+          id="confirm1"
+          type="checkbox"
+          required
+        >
+
+        <label for="confirm1">
+
+          CourTomoが
+          学校・部活動・勤務先とは別に運営される
+          独立した活動であることを確認しました。
+
+        </label>
+
+      </div>
+
+
+      <div class="check">
+
+        <input
+          id="confirm2"
+          type="checkbox"
+          required
+        >
+
+        <label for="confirm2">
+
+          参加案内・開催連絡を
+          保護者の連絡先で受け取ることに同意します。
+
+        </label>
+
+      </div>
+
+
+      <div class="check">
+
+        <input
+          id="confirm3"
+          type="checkbox"
+          required
+        >
+
+        <label for="confirm3">
+
+          現時点では第一期メンバー登録であり、
+          登録だけで開催・参加が確定するものではないことを
+          確認しました。
+
+        </label>
+
+      </div>
+
+    </div>
+
+
+
+    <!-- SUBMIT -->
+
+    <div class="submit-wrap">
+
+      <button type="submit">
+
+        第一期メンバーとして登録する →
+
+      </button>
+
+    </div>
+
+
+  </form>
+
+
+
+  <!-- SUCCESS -->
+
+  <section
+    class="success"
+    id="success"
+  >
+
+    <h2>
+      登録デモ、完了。
+    </h2>
+
+
+    <p>
+
+      現在のページでは
+      個人情報は保存されていません。
+
+      本番受付システムを接続後、
+      ここが実際の申込完了画面になります。
+
+    </p>
+
+
+    <a href="index.html">
+
+      CourTomoトップへ戻る →
+
+    </a>
+
+  </section>
+
+
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    © 2026 CourTomo
+
+  </footer>
+
+
+</div>
+
+
+
+<script>
+
+  const form =
+    document.getElementById(
+      "entryForm"
+    );
+
+
+  const success =
+    document.getElementById(
+      "success"
+    );
+
+
+  form.addEventListener(
+    "submit",
+    function(event) {
+
+      event.preventDefault();
+
+
+      form.style.display =
+        "none";
+
+
+      success.style.display =
+        "block";
+
+
+      window.scrollTo({
+
+        top: 0,
+
+        behavior: "smooth"
+
+      });
+
+    }
+  );
+
+</script>
+
+
+</body>
+
+</html>
