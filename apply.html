@@ -2,6 +2,7 @@
 <html lang="ja">
 
 <head>
+
   <meta charset="utf-8">
 
   <meta
@@ -24,11 +25,8 @@
     :root {
 
       --bg: #f1eee7;
-
       --paper: #f8f5ee;
-
       --ink: #151515;
-
       --sub: #68645c;
 
       --line:
@@ -44,14 +42,12 @@
 
 
     * {
-      box-sizing:
-        border-box;
+      box-sizing: border-box;
     }
 
 
     html {
-      scroll-behavior:
-        smooth;
+      scroll-behavior: smooth;
     }
 
 
@@ -59,11 +55,9 @@
 
       margin: 0;
 
-      background:
-        var(--bg);
+      background: var(--bg);
 
-      color:
-        var(--ink);
+      color: var(--ink);
 
       font-family:
         "Hiragino Sans",
@@ -82,23 +76,18 @@
 
       content: "";
 
-      position:
-        fixed;
+      position: fixed;
 
       inset: 0;
 
-      pointer-events:
-        none;
+      pointer-events: none;
 
-      opacity:
-        0.12;
+      opacity: 0.12;
 
       background-image:
         radial-gradient(
-          rgba(0, 0, 0, 0.32)
-          0.45px,
-          transparent
-          0.55px
+          rgba(0, 0, 0, 0.32) 0.45px,
+          transparent 0.55px
         );
 
       background-size:
@@ -107,8 +96,7 @@
       mix-blend-mode:
         multiply;
 
-      z-index:
-        100;
+      z-index: 100;
 
     }
 
@@ -125,8 +113,7 @@
 
 
     a {
-      color:
-        inherit;
+      color: inherit;
     }
 
 
@@ -145,14 +132,11 @@
 
 
 
-    /* -------------------
-       HEADER
-    ------------------- */
+    /* HEADER */
 
     .topbar {
 
-      height:
-        74px;
+      height: 74px;
 
       border-bottom:
         1px solid var(--line);
@@ -201,9 +185,7 @@
 
 
 
-    /* -------------------
-       INTRO
-    ------------------- */
+    /* INTRO */
 
     .intro {
 
@@ -247,8 +229,7 @@
       max-width:
         800px;
 
-      margin:
-        0;
+      margin: 0;
 
       font-size:
         clamp(
@@ -287,9 +268,7 @@
 
 
 
-    /* -------------------
-       PHOTO
-    ------------------- */
+    /* PHOTO */
 
     .cover {
 
@@ -386,9 +365,7 @@
 
 
 
-    /* -------------------
-       BASIC INFO
-    ------------------- */
+    /* BASIC INFO */
 
     .info {
 
@@ -455,9 +432,7 @@
 
 
 
-    /* -------------------
-       NOTICE
-    ------------------- */
+    /* NOTICE */
 
     .notice {
 
@@ -491,9 +466,7 @@
 
 
 
-    /* -------------------
-       FORM
-    ------------------- */
+    /* FORM */
 
     form {
 
@@ -701,9 +674,7 @@
 
 
 
-    /* -------------------
-       CHECKBOX
-    ------------------- */
+    /* CHECKBOX */
 
     .check {
 
@@ -765,9 +736,7 @@
 
 
 
-    /* -------------------
-       SUBMIT
-    ------------------- */
+    /* SUBMIT */
 
     .submit-wrap {
 
@@ -787,6 +756,9 @@
 
 
     button {
+
+      min-width:
+        280px;
 
       padding:
         17px 22px;
@@ -832,10 +804,25 @@
     }
 
 
+    button:disabled {
 
-    /* -------------------
-       SUCCESS
-    ------------------- */
+      opacity:
+        0.55;
+
+      cursor:
+        wait;
+
+      transform:
+        none;
+
+      box-shadow:
+        none;
+
+    }
+
+
+
+    /* SUCCESS */
 
     .success {
 
@@ -846,7 +833,7 @@
         10px 0 75px;
 
       padding:
-        30px;
+        34px;
 
       border:
         1.3px solid var(--ink);
@@ -857,13 +844,34 @@
     }
 
 
+    .success-label {
+
+      margin-bottom:
+        10px;
+
+      font:
+        700 10px monospace;
+
+      letter-spacing:
+        0.12em;
+
+      color:
+        var(--orange);
+
+    }
+
+
     .success h2 {
 
       margin:
-        0 0 10px;
+        0 0 14px;
 
       font-size:
-        34px;
+        clamp(
+          30px,
+          5vw,
+          48px
+        );
 
       letter-spacing:
         -0.04em;
@@ -873,11 +881,14 @@
 
     .success p {
 
+      max-width:
+        600px;
+
       margin:
         0;
 
       line-height:
-        1.8;
+        1.9;
 
       color:
         #4e4a44;
@@ -891,7 +902,7 @@
         inline-block;
 
       margin-top:
-        18px;
+        22px;
 
       font-weight:
         800;
@@ -900,9 +911,39 @@
 
 
 
-    /* -------------------
-       FOOTER
-    ------------------- */
+    /* ERROR */
+
+    .error-message {
+
+      display:
+        none;
+
+      grid-column:
+        1 / -1;
+
+      margin-top:
+        20px;
+
+      padding:
+        14px 16px;
+
+      border-left:
+        3px solid #b3382c;
+
+      background:
+        rgba(179, 56, 44, 0.08);
+
+      font-size:
+        13px;
+
+      line-height:
+        1.7;
+
+    }
+
+
+
+    /* FOOTER */
 
     footer {
 
@@ -922,9 +963,7 @@
 
 
 
-    /* -------------------
-       MOBILE
-    ------------------- */
+    /* MOBILE */
 
     @media (
       max-width: 760px
@@ -1050,6 +1089,9 @@
         width:
           100%;
 
+        min-width:
+          0;
+
       }
 
     }
@@ -1105,10 +1147,12 @@
 
     <p class="intro-text">
 
-      CourTomoはこれから始まる活動です。
+      CourTomoは、
+      中学生が参加したい練習を選んで参加できる
+      単発型のバスケットボール活動です。
 
-      まずは活動開始に向けたメンバー登録として
-      受け付けます。
+      まずは活動開始に向けた
+      第一期メンバーを募集します。
 
       開催日時・会場が決まり次第、
       保護者の方へご案内します。
@@ -1174,18 +1218,15 @@
 
 
 
-  <!-- NOTICE -->
+  <!-- PRIVACY NOTICE -->
 
   <div class="notice">
 
-    現在は第一期メンバー登録用の試作フォームです。
+    ご入力いただいた情報は、
+    CourTomoの活動案内・参加連絡・活動運営のために使用します。
 
-    このページでは、
-    入力された情報はまだ保存・送信されません。
-
-    本番運用時には、
-    Googleスプレッドシート等へ
-    申込情報を集約できるように変更します。
+    学校・部活動・勤務先とは別に管理し、
+    CourTomoの運営以外の目的では使用しません。
 
   </div>
 
@@ -1194,7 +1235,6 @@
   <!-- FORM -->
 
   <form id="entryForm">
-
 
 
     <!-- GUARDIAN -->
@@ -1210,7 +1250,7 @@
       </h2>
 
       <p>
-        連絡は保護者の方へ行います。
+        ご連絡は保護者の方へ行います。
       </p>
 
     </div>
@@ -1229,6 +1269,7 @@
           </span>
 
         </label>
+
 
         <input
           type="text"
@@ -1252,6 +1293,7 @@
 
         </label>
 
+
         <input
           type="email"
           name="email"
@@ -1273,6 +1315,7 @@
           </span>
 
         </label>
+
 
         <input
           type="tel"
@@ -1320,6 +1363,7 @@
 
         </label>
 
+
         <input
           type="text"
           name="player"
@@ -1340,6 +1384,7 @@
           </span>
 
         </label>
+
 
         <select
           name="grade"
@@ -1378,6 +1423,7 @@
           </span>
 
         </label>
+
 
         <select
           name="area"
@@ -1420,6 +1466,7 @@
           </span>
 
         </label>
+
 
         <select
           name="experience"
@@ -1482,7 +1529,9 @@
         </label>
 
 
-        <select name="theme">
+        <select
+          name="theme"
+        >
 
           <option value="シュート">
             シュート
@@ -1496,7 +1545,7 @@
             ディフェンス
           </option>
 
-          <option value="身体づくり">
+          <option value="身体づくり・ストレッチ">
             身体づくり・ストレッチ
           </option>
 
@@ -1504,7 +1553,7 @@
             ゲーム形式
           </option>
 
-          <option value="未定">
+          <option value="まだ決めていない">
             まだ決めていない
           </option>
 
@@ -1516,8 +1565,10 @@
       <div class="field">
 
         <label>
+
           CourTomoに期待すること
           （任意）
+
         </label>
 
 
@@ -1562,9 +1613,10 @@
           required
         >
 
+
         <label for="confirm1">
 
-          CourTomoが
+          CourTomoが、
           学校・部活動・勤務先とは別に運営される
           独立した活動であることを確認しました。
 
@@ -1581,9 +1633,11 @@
           required
         >
 
+
         <label for="confirm2">
 
-          参加案内・開催連絡を
+          CourTomoから、
+          活動案内・開催情報・参加に必要な連絡を
           保護者の連絡先で受け取ることに同意します。
 
         </label>
@@ -1598,6 +1652,7 @@
           type="checkbox"
           required
         >
+
 
         <label for="confirm3">
 
@@ -1617,11 +1672,30 @@
 
     <div class="submit-wrap">
 
-      <button type="submit">
+      <button
+        id="submitButton"
+        type="submit"
+      >
 
         第一期メンバーとして登録する →
 
       </button>
+
+    </div>
+
+
+
+    <!-- ERROR -->
+
+    <div
+      class="error-message"
+      id="errorMessage"
+    >
+
+      送信に失敗しました。
+
+      通信環境をご確認のうえ、
+      もう一度お試しください。
 
     </div>
 
@@ -1637,18 +1711,25 @@
     id="success"
   >
 
+    <div class="success-label">
+
+      ENTRY RECEIVED
+
+    </div>
+
+
     <h2>
-      登録デモ、完了。
+      登録を受け付けました。
     </h2>
 
 
     <p>
 
-      現在のページでは
-      個人情報は保存されていません。
+      CourTomo第一期メンバーへの
+      ご登録ありがとうございます。
 
-      本番受付システムを接続後、
-      ここが実際の申込完了画面になります。
+      開催日時・会場などの準備が整い次第、
+      ご登録いただいた連絡先へご案内します。
 
     </p>
 
@@ -1678,9 +1759,19 @@
 
 <script>
 
+  const WEB_APP_URL =
+    "https://script.google.com/macros/s/AKfycby92fsrKSr2PVrUVGugRvyVbhfQcpYayKpEealuZ01_SQvJjuHPIGbqXecCdXeirodfjg/exec";
+
+
   const form =
     document.getElementById(
       "entryForm"
+    );
+
+
+  const submitButton =
+    document.getElementById(
+      "submitButton"
     );
 
 
@@ -1690,28 +1781,117 @@
     );
 
 
+  const errorMessage =
+    document.getElementById(
+      "errorMessage"
+    );
+
+
   form.addEventListener(
     "submit",
-    function(event) {
+    async function(event) {
 
       event.preventDefault();
 
 
-      form.style.display =
+      errorMessage.style.display =
         "none";
 
 
-      success.style.display =
-        "block";
+      submitButton.disabled =
+        true;
 
 
-      window.scrollTo({
+      submitButton.textContent =
+        "送信中...";
 
-        top: 0,
 
-        behavior: "smooth"
+      const formData =
+        new FormData(form);
 
-      });
+
+      const params =
+        new URLSearchParams();
+
+
+      for (
+        const [key, value]
+        of formData.entries()
+      ) {
+
+        params.append(
+          key,
+          value
+        );
+
+      }
+
+
+      try {
+
+        await fetch(
+          WEB_APP_URL,
+          {
+
+            method:
+              "POST",
+
+            mode:
+              "no-cors",
+
+            headers: {
+
+              "Content-Type":
+                "application/x-www-form-urlencoded"
+
+            },
+
+            body:
+              params.toString()
+
+          }
+        );
+
+
+        form.style.display =
+          "none";
+
+
+        success.style.display =
+          "block";
+
+
+        window.scrollTo({
+
+          top:
+            0,
+
+          behavior:
+            "smooth"
+
+        });
+
+
+      } catch (error) {
+
+
+        console.error(
+          error
+        );
+
+
+        errorMessage.style.display =
+          "block";
+
+
+        submitButton.disabled =
+          false;
+
+
+        submitButton.textContent =
+          "第一期メンバーとして登録する →";
+
+      }
 
     }
   );
